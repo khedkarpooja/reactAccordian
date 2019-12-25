@@ -1,0 +1,131 @@
+$secondary-color: #5362c6;
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: $secondary-color !important;
+    cursor: pointer;
+    padding: 18px;
+    width: auto !important;
+    text-align: left;
+    border: none;
+    margin-bottom: 10px;
+
+    &:after {
+        color: $secondary-color;
+        float: right;
+        content: url('./close-icon.png');
+        font-size: 20px;
+        position: relative;
+        transform: rotate(-45deg);
+        clear: both;
+        display: table;
+    }
+
+    &:before {
+        display: inline-block;
+        content: "";
+        height: 10px;
+        width: 10px;
+        margin-right: 12px !important;
+        border-bottom: none !important;
+        border-right: none !important;
+    }
+
+    &[aria-expanded="true"]::after,
+    &[aria-selected="true"]::after {
+        transform: rotate(-90deg);
+        margin-top: 0;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin flex-wrapper() {
+    display: flex !important;
+    justify-content: space-between;
+    // flex-wrap:wrap;
+    flex-direction: row;
+}
+
+.filter-wrapper {
+    @include flex-wrapper();
+}
+
+.Dropdown-root {
+    @mixin align-dropdown {
+        padding: 10px;
+
+    }
+
+    width: 200px;
+    color: #70646B;
+
+    .Dropdown-control {
+        // border: 1px solid #eee;
+        background: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        .Dropdown-arrow-wrapper {
+            border: 1px solid #31CDF7;
+            background: #31CDF7;
+            height: 15px;
+            width: 15px;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow-closed {
+            color: #fff;
+            border: 1px solid none;
+            height: 5px;
+            width: 5px;
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(45deg);
+        }
+
+        .arrow-open {
+            color: #fff;
+            border: 1px solid none;
+            height: 5px;
+            width: 5px;
+            border-top: 2px solid #fff;
+            border-left: 2px solid #fff;
+            transform: rotate(45deg);
+        }
+    }
+
+    .Dropdown-menu {
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 5px #ccc;
+
+        .Dropdown-option {
+            @include align-dropdown();
+
+            &:hover {
+                background: #27B9F4;
+                color: #ffffff;
+            }
+        }
+
+        .Dropdown-option.is-selected {
+            &:after {
+                content: "";
+                border: 1px solid #fff;
+                height: 10px;
+                width: 10px;
+                /* border-radius: 50%; */
+                float: right;
+                display: block;
+                background: #fff;
+                border-radius: 50%;
+            }
+        }
+    }
+}
