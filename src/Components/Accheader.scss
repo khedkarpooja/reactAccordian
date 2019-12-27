@@ -1,0 +1,43 @@
+.block {
+
+    .accordion {
+        transition: all 0.25s;
+        background-color: #F9F8F8;
+        box-shadow: 'none';
+         padding: 20px;
+         justify-content: space-between !important;
+    }
+
+    .accordionnode{
+        margin-bottom: 10px;
+    }
+
+    .accordion{
+        .item {
+        min-width: 100px;
+    }
+}
+
+    .content {
+        padding: 35px;
+        background: #f9f8f8;
+        p {
+            color: #000000;
+        }
+
+    }
+
+       .circle-plus.closed img {
+        transition: all 0.5s;
+        transform: rotate(-45deg);
+    }
+    .circle-plus.opened img {
+        transition: all 0.5s;
+        transform: rotate(90deg);
+    }
+
+  
+    .circle-plus {
+        width: 4em;
+     }
+}
