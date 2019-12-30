@@ -1,43 +1,55 @@
-.block {
+.accordian-wrapper {
 
-    .accordion {
-        transition: all 0.25s;
-        background-color: #F9F8F8;
-        box-shadow: 'none';
-         padding: 20px;
-         justify-content: space-between !important;
-    }
-
-    .accordionnode{
+    .accordionnode {
         margin-bottom: 10px;
-    }
 
-    .accordion{
-        .item {
-        min-width: 100px;
+        .accordion {
+            transition: all 0.25s;
+            background-color: #F9F8F8;
+            box-shadow: 'none';
+            padding: 20px;
+            justify-content: space-between !important;
+
+            .item {
+                min-width: 100px;
+            }
+
+            .accordion-title {
+                color: #532b9f;
+                font-size: 18px;
+                margin: 10px 10px;
+            }
+        }
     }
-}
 
     .content {
         padding: 35px;
         background: #f9f8f8;
-        p {
-            color: #000000;
+
+        ul li {
+            font-size: 12px;
+            // font-family: felix-regular;
+            margin-bottom: 10px;
+            color: #565a5c;
+            font-weight: 400;
+        }
+    }
+
+    .circle-plus.closed {
+        img {
+            transition: all 0.5s;
+            transform: rotate(-45deg);
         }
 
-    }
+        .circle-plus.opened {
+            img {
+                transition: all 0.5s;
+                transform: rotate(90deg);
+            }
+        }
 
-       .circle-plus.closed img {
-        transition: all 0.5s;
-        transform: rotate(-45deg);
+        .circle-plus {
+            width: 4em;
+        }
     }
-    .circle-plus.opened img {
-        transition: all 0.5s;
-        transform: rotate(90deg);
-    }
-
-  
-    .circle-plus {
-        width: 4em;
-     }
 }
